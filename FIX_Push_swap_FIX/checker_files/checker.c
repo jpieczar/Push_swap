@@ -49,9 +49,9 @@ int     zerocheck(char *str)
 
 void	ehand(char *str)
 {
-	if (!e(str) ||  !zerocheck(str))
+	if (/*!e(str) ||*/  !zerocheck(str))
 	{
-		ft_putendl("Error");
+		ft_putendl("Error3");
 		exit(0);
 	}
 }

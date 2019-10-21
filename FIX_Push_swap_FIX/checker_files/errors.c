@@ -32,10 +32,10 @@ int		duplicate(int ac, char **av)
 	int i;
 	int j;
 
-	i = 1;
+	i = 0;
 	while (i < ac)
 	{
-		j = 1;
+		j = 0;
 		while (j < i)
 		{
 			if (ft_strequ(av[i], av[j]))
@@ -54,7 +54,7 @@ int		e(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (ft_isdigit(str[i])|| str[i] == ' ')
+		if (ft_isdigit(str[i]) || (str[i] == ' ' || str[i] == '-'))
 			i++;
 		else
 			return (0);
