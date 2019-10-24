@@ -33,23 +33,10 @@ char	*argcat(char *s1, const char *s2)
 	return (s1);
 }
 
-int     zerocheck(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == '0' && (str[i + 1] == '0' || (str[i + 1] > 48 && str[i + 1] < 59)))
-			return (0);
-		i++;
-	}
-	return (1);
-}
 
 void	ehand(char *str)
 {
-	if (/*!e(str) ||*/  !zerocheck(str))
+	if (!e(str))
 	{
 		ft_putendl("Error3");
 		exit(0);
@@ -62,18 +49,18 @@ int		make(t_node *a, t_node *b, int ac, char **av)
 
 	if (!duplicate(ac, av))
 	{
-		ft_putendl("Error");
+		ft_putendl("Error2");
 		exit(0);
 	}
-	lim(av, 2);
 	ft_putedon(&a, av, ac);
+	lim(&a);
 	while (get_next_line(0, &line))
 	{
 		if (r(line))
 			think_(line, &a, &b);
 		else
 		{
-			ft_putendl("Error");
+			ft_putendl("Error1");
 			exit(0);
 		}
 		free(line);

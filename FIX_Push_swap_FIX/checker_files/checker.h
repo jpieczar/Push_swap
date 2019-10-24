@@ -17,7 +17,6 @@
 
 int		make(t_node *a, t_node *b, int ac, char **av);
 char    *argcat(char *s1, const char *s2);
-int     zerocheck(char *str);
 void    ehand(char *str);
 
 void	swapcheck(t_node **list);
@@ -33,6 +32,6 @@ int		e(char *str);
 int		r(char *line);
 int		duplicate(int ac, char **av);
 int		sorted(t_node **list);
-void	lim(char **av, int a);
+void	lim(t_node **list);
 
 #endif

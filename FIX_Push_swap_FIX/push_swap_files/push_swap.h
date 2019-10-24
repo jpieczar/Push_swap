@@ -18,7 +18,6 @@
 
 int		ekam(t_node *a, t_node *b, int ac, char **av);
 char    *argcat(char *s1, const char *s2);
-int     zerocheck(char *str);
 void    ehand(char *str);
 
 void	swapcheck(t_node **list);
@@ -28,7 +27,7 @@ void	rrot(t_node **list);
 int		e(char *arg);
 int		duplicate(int ac, char **av);
 int		sorted(t_node **list);
-void	lim(char **av, int a);
+void	lim(t_node **list);
 
 void	in_sort(t_node **list, t_node **tsil, int i);
 void	givepos(t_node **list);

@@ -54,7 +54,7 @@ int		e(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (ft_isdigit(str[i]) || (str[i] == ' ' || str[i] == '-'))
+		if ((ft_isdigit(str[i])) || (str[i] == ' ' || str[i] == '-'))
 			i++;
 		else
 			return (0);
@@ -80,31 +80,22 @@ int		r(char *line)
 		return (0);
 }
 
-void	lim(char **av, int a)
+void	lim(t_node **list)
 {
-	int		i;
-	char	**dub;
+	long long max;
+	long long min;
+	t_node	*tsil;
 
-	i = 0;
-	if (a == 1)
+	tsil = *list;
+	max = 2147483647;
+	min = -2147483649;
+	while (tsil)
 	{
-		while (av[++i])
+		if ((tsil->data < min) || (tsil->data > max))
 		{
-			if (ft_atoll(av[i]) < -2147483648 || ft_atoll(av[i]) > 2147483647)
-			{
-				ft_putendl("Error");
-				exit(0);
-			}
+			ft_putendl("Error4");
+			exit(0);
 		}
-	}
-	else
-	{
-		dub = ft_strspliter(av[1]);
-		while (dub[++i])
-			if (ft_atoll(dub[i]) < -2147483648 || ft_atoll(dub[i]) > 2147483647)
-			{
-				ft_putendl("Error");
-				exit(0);
-			}
+		tsil = tsil->next;
 	}
 }

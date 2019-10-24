@@ -12,30 +12,6 @@
 
 #include "push_swap.h"
 
-// int		ekam(t_node *a, t_node *b, int ac, char **av)
-// {
-// 	int i;
-
-// 	if (!e(av) || !duplicate(ac, av))
-// 	{
-// 		ft_putendl("Error");
-// 		exit(0);
-// 	}
-// 	lim(av, 1);
-// 	ft_putnode(&a, av, ac);
-// 	i = ft_countd(&a);
-// 	if (ft_countd(&a) == 2 && !sorted(&a))
-// 	{
-// 		swapcheck(&a);
-// 		ft_putendl("sa");
-// 		return (1);
-// 	}
-// 	if (!sorted(&a))
-// 		in_sort(&a, &b, i);
-// 	ft_lstdelthis(&a);
-// 	return (1);
-// }
-
 char	*argcat(char *s1, const char *s2)
 {
 	int	i;
@@ -56,23 +32,9 @@ char	*argcat(char *s1, const char *s2)
 	return (s1);
 }
 
-int     zerocheck(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == '0' && (str[i + 1] == '0' || (str[i + 1] > 48 && str[i + 1] < 59)))
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
 void	ehand(char *str)
 {
-	if (/*!e(str) ||*/  !zerocheck(str))
+	if (!e(str))
 	{
 		ft_putendl("Error");
 		exit(0);
@@ -88,8 +50,8 @@ int		ekam(t_node *a, t_node *b, int ac, char **av)
 		ft_putendl("Error");
 		exit(0);
 	}
-	lim(av, 2);
 	ft_putedon(&a, av, ac);
+	lim(&a);
 	i = ft_countd(&a);
 	if (ft_countd(&a) == 2 && !sorted(&a))
 	{

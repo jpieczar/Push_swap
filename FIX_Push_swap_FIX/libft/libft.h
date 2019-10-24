@@ -26,7 +26,7 @@ typedef	struct		s_list
 
 typedef struct		s_ubly
 {
-	int				data;
+	long long		data;
 	int				pos;
 	struct s_ubly	*next;
 }					t_node;

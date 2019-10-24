@@ -14,9 +14,9 @@
 
 long long	ft_atoll(const char *str)
 {
-	int		i;
-	long	res;
-	int		mul;
+	int			i;
+	long long	res;
+	long long	mul;
 
 	i = 0;
 	res = 0;

@@ -18,14 +18,14 @@ void	ft_putedon(t_node **list, char **av, int ac)
 	int		i;
 
 	*list = ft_newdnode();
-	(*list)->data = ft_atoi(av[0]);
+	(*list)->data = ft_atoll(av[0]);
 	(*list)->pos = 0;
 	tsil = *list;
 	i = 1;
 	while (i < ac)
 	{
 		tsil->next = ft_newdnode();
-		tsil->next->data = ft_atoi(av[i]);
+		tsil->next->data = ft_atoll(av[i]);
 		tsil->next->pos = 0;
 		tsil = tsil->next;
 		i++;
