@@ -30,7 +30,7 @@ void	twice(char *str, t_node **a, t_node **b);
 
 int		e(char *str);
 int		r(char *line);
-int		duplicate(int ac, char **av);
+int		duplicate(t_node **list);
 int		sorted(t_node **list);
 void	lim(t_node **list);
 

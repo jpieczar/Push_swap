@@ -27,21 +27,29 @@ int		sorted(t_node **list)
 	return (1);
 }
 
-int		duplicate(int ac, char **av)
+int		duplicate(t_node **list)
 {
-	int i;
-	int j;
+	int		i;
+	int		j;
+	t_node	*a;
+	t_node	*b;
 
 	i = 0;
-	while (i < ac)
+	j = 0;
+	a = *list;
+	b = *list;
+	while (a)
 	{
+		b = *list;
 		j = 0;
 		while (j < i)
 		{
-			if (ft_strequ(av[i], av[j]))
+			if (b->data == a->data)
 				return (0);
+			b = b->next;
 			j++;
 		}
+		a = a->next;
 		i++;
 	}
 	return (1);

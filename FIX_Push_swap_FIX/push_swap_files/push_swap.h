@@ -25,7 +25,7 @@ void	rot(t_node **list);
 void	rrot(t_node **list);
 
 int		e(char *arg);
-int		duplicate(int ac, char **av);
+int		duplicate(t_node **list);
 int		sorted(t_node **list);
 void	lim(t_node **list);
 

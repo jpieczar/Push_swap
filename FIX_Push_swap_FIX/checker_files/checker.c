@@ -38,7 +38,7 @@ void	ehand(char *str)
 {
 	if (!e(str))
 	{
-		ft_putendl("Error3");
+		ft_putendl("Error");
 		exit(0);
 	}
 }
@@ -47,12 +47,12 @@ int		make(t_node *a, t_node *b, int ac, char **av)
 {
 	char	*line;
 
-	if (!duplicate(ac, av))
+	ft_putedon(&a, av, ac);
+	if (!duplicate(&a))
 	{
-		ft_putendl("Error2");
+		ft_putendl("Error");
 		exit(0);
 	}
-	ft_putedon(&a, av, ac);
 	lim(&a);
 	while (get_next_line(0, &line))
 	{
@@ -60,7 +60,7 @@ int		make(t_node *a, t_node *b, int ac, char **av)
 			think_(line, &a, &b);
 		else
 		{
-			ft_putendl("Error1");
+			ft_putendl("Error");
 			exit(0);
 		}
 		free(line);

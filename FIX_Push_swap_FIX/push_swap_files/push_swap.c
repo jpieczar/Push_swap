@@ -45,12 +45,12 @@ int		ekam(t_node *a, t_node *b, int ac, char **av)
 {
 	int i;
 
-	if (!duplicate(ac, av))
+	ft_putedon(&a, av, ac);
+	if (!duplicate(&a))
 	{
 		ft_putendl("Error");
 		exit(0);
 	}
-	ft_putedon(&a, av, ac);
 	lim(&a);
 	i = ft_countd(&a);
 	if (ft_countd(&a) == 2 && !sorted(&a))
