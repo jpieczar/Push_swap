@@ -96,7 +96,7 @@ void	lim(t_node **list)
 
 	tsil = *list;
 	max = 2147483647;
-	min = -2147483649;
+	min = -2147483648;
 	while (tsil)
 	{
 		if ((tsil->data < min) || (tsil->data > max))
